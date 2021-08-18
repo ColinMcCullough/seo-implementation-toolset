@@ -19,16 +19,16 @@ export const state = () => ({
       'community_amenity_3'
     ],
     keywords: [
-      'amenity_keywords',
-      'comm_amenity_keywords'
+      'additional_apartment_amenities',
+      'additional_community_amenities'
     ],
     phrases: ['amenity_phrases']
   },
   keywordInput: {
     neighborhood_keywords: '',
     landmark_keywords: '',
-    amenity_keywords: '',
-    comm_amenity_keywords: '',
+    additional_apartment_amenities: '',
+    additional_community_amenities: '',
     api_neighborhood_keywords: '',
     api_landmark_keywords: ''
   },

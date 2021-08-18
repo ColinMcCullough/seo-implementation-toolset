@@ -14,6 +14,10 @@ export default {
         'community_amenity_2',
         'community_amenity_3'
       ],
+      arrayToString: [
+        'additional_apartment_amenities',
+        'additional_community_amenities'
+      ],
       addProp: [
         'neighborhood_keywords',
         'landmark_keywords',
@@ -175,6 +179,8 @@ export default {
               if (!filterVal.includes(key)) {
                 if (this.propertiesToString.includes(key) && val.length > 0) {
                   formattedLoc[key] = val[0].name
+                } else if (this.arrayToString.includes(key) && val.length > 0) {
+                  formattedLoc[key] = val.map(obj => obj.name).join(', ')
                 } else {
                   formattedLoc[key] = val
                 }

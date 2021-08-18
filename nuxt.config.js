@@ -15,7 +15,7 @@ module.exports = {
   },
   server: {
     host: process.env.BASE_URL || 'localhost',
-    port: process.env.PORT || 8000
+    port: process.env.PORT || 3000
   },
   loading: {
     color: '#7898ad',
