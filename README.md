@@ -19,7 +19,9 @@ $ npm run start
 $ npm run generate
 
 # publish commands
+sudo su opex
 cd ~/seo-implementation-toolset
+git pull
 $ npm i ( if you need to install a new package )
 $ npm run build
 $ sudo pm2 restart 0
