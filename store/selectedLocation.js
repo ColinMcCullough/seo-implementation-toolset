@@ -39,8 +39,8 @@ export const getters = {
         community_amenity_3: state.location.properties.community_amenity_3,
         neighborhood_keywords: state.location.properties.neighborhood_keywords,
         landmark_keywords: state.location.properties.landmark_keywords,
-        additional_apartment_amenities: state.location.properties.additional_apartment_amenities,
-        additional_community_amenities: state.location.properties.additional_community_amenities,
+        additional_amenities_apartment: state.location.properties.additional_amenities_apartment,
+        additional_amenities_community: state.location.properties.additional_amenities_community,
         api_neighborhood_keywords: state.location.properties.api_neighborhood_keywords,
         api_landmark_keywords: state.location.properties.api_landmark_keywords,
         negative_keywords: state.location.properties.negative_keywords

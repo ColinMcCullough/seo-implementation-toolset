@@ -15,8 +15,8 @@ export default {
         'community_amenity_3'
       ],
       arrayToString: [
-        'additional_apartment_amenities',
-        'additional_community_amenities'
+        'additional_amenities_apartment',
+        'additional_amenities_community'
       ],
       addProp: [
         'neighborhood_keywords',
