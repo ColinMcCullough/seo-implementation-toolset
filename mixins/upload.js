@@ -16,8 +16,8 @@ export default {
       propertiesToArr: [
         'neighborhood_keywords',
         'landmark_keywords',
-        'additional_apartment_amenities',
-        'additional_community_amenities',
+        'additional_amenities_apartment',
+        'additional_amenities_community',
         'neighborhood',
         'neighborhood_2',
         'landmark_1_name',
