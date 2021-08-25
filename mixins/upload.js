@@ -145,6 +145,18 @@ export default {
         })
       })
     },
+    buildLandmarks(props, vertical) {
+      const map = {
+        mf: ['landmark_1_name', 'nearby_employers', 'nearby_schools', 'nearby_restaurants', 'nearby_shopping'],
+        ss: ['landmark_1_name', 'nearby_roadway_1', 'nearby_roadway_2'],
+        sl: ['landmark_1_name', 'nearby_employers', 'nearby_restaurants', 'nearby_shopping', 'nearby_healthcare_1']
+      }
+      return map[vertical].reduce((res, key) => {
+        const val = props[key] ? props[key].split(this.splitRgx) : []
+        res.push(...val)
+        return res
+      }, [])
+    },
     getLocationData(data) {
       return data[0].name ? data.map((location) => {
         const { name } = location
@@ -161,7 +173,11 @@ export default {
           properties[prop] = addPropertyFields[prop]
         } // turns keyword string into arr objects
         this.propertiesToArr.forEach((prop) => {
-          const arr = properties[prop] ? properties[prop].split(this.splitRgx) : []
+          const arr = properties[prop]
+            ? properties[prop].split(this.splitRgx)
+            : prop === 'landmark_keywords'
+              ? this.buildLandmarks(properties, this.initSelects.selects[0].value)
+              : []
           for (let i = 0; i < arr.length; i++) {
             arr[i] = { name: arr[i], id: i }
           }
