@@ -147,12 +147,13 @@ export default {
     },
     buildLandmarks(props, vertical) {
       const map = {
-        mf: ['landmark_1_name', 'nearby_employers', 'nearby_schools', 'nearby_restaurants', 'nearby_shopping'],
+        mf: ['landmark_1_name', 'nearby_employer_1', 'nearby_employer_2', 'nearby_employer_3', 'nearby_employers', 'nearby_schools', 'nearby_restaurants', 'nearby_shopping'],
         ss: ['landmark_1_name', 'nearby_roadway_1', 'nearby_roadway_2'],
-        sl: ['landmark_1_name', 'nearby_employers', 'nearby_restaurants', 'nearby_shopping', 'nearby_healthcare_1']
+        sl: ['landmark_1_name', 'nearby_restaurants', 'nearby_shopping', 'nearby_healthcare_1']
       }
       return map[vertical].reduce((res, key) => {
-        const val = props[key] ? props[key].split(this.splitRgx) : []
+        const val = props[key] && typeof props[key] === 'string'
+          ? props[key].split(this.splitRgx) : []
         res.push(...val)
         return res
       }, [])
