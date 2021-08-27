@@ -1,6 +1,6 @@
 # seo-implementation
 
-Migrating project from https://github.com/ColinMcCullough/SEO-Implementation-Toolset-2020/
+Centralized app for the SEO Implementation Team at G5 to review client data, conduct keyword research, and push data to other G5. systems.
 
 ## Build Setup
 
