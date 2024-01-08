@@ -15,7 +15,6 @@
   "dependencies": {
     "@babel/cli": "^7.13.10",
     "@babel/core": "^7.13.10",
-    "@getg5/g5-auth": "^2.0.9",
     "@nuxt/loading-screen": "^2.0.3",
     "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/dotenv": "^1.4.0",
