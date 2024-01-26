@@ -90,3 +90,6 @@ sw.*
 *.swp
 t { INTEGER, STRING } = require('sequelize')
 tatus {
+certs/client-cert.pem
+certs/client-key.pem
+certs/server-ca.pem
